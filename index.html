@@ -1,0 +1,100 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Portal didático de Eliane da Silva Coelho — aulas, atividades e materiais de Computação.">
+  <title>Prof.ª Eliane Coelho | Computação e Tecnologia</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="topbar">
+    <a class="brand" href="#inicio" aria-label="Página inicial de Eliane Coelho">
+      <span class="brand-mark">EC</span>
+      <span><strong>Eliane Coelho</strong><small>Educação em Computação</small></span>
+    </a>
+    <button class="menu-button" aria-label="Abrir menu" aria-expanded="false">☰</button>
+    <nav class="nav" aria-label="Navegação principal">
+      <a href="#sobre">Sobre</a><a href="#disciplinas">Disciplinas</a><a href="#trajetoria">Trajetória</a><a href="#contato">Links</a>
+    </nav>
+  </header>
+
+  <main id="conteudo">
+    <section class="hero" id="inicio">
+      <div class="hero-copy">
+        <p class="eyebrow">DOCÊNCIA • TECNOLOGIA • PESQUISA</p>
+        <h1>Computação ensinada com <em>clareza</em>, prática e propósito.</h1>
+        <p class="lead">Um espaço para reunir aulas, atividades e materiais das minhas disciplinas — organizado para que cada estudante saiba o que estudar e onde encontrar.</p>
+        <div class="hero-actions">
+          <a class="button primary" href="#disciplinas">Acessar disciplinas <span>→</span></a>
+          <a class="button secondary" href="#sobre">Conheça minha trajetória</a>
+        </div>
+      </div>
+      <aside class="hero-card" aria-label="Resumo profissional">
+        <img class="portrait" src="eliane-coelho.png" alt="Eliane da Silva Coelho">
+        <p>Professora e profissional de Tecnologia da Informação</p>
+        <div class="mini-tags"><span>Desenvolvimento</span><span>Dados</span><span>Segurança</span></div>
+        <div class="status"><i></i> Materiais em atualização contínua</div>
+      </aside>
+    </section>
+
+    <section class="section intro" id="sobre">
+      <div class="section-label"><span>01</span> SOBRE MIM</div>
+      <div class="intro-grid">
+        <h2>Entre a sala de aula, o código e a pesquisa.</h2>
+        <div>
+          <p>Sou <strong>Eliane da Silva Coelho</strong>, professora da Educação Profissional e Tecnológica e mestranda em Informática pela UFPR. Minha atuação reúne desenvolvimento de software, segurança cibernética, computação em nuvem e pesquisa aplicada.</p>
+          <p>Este portal nasceu para tornar o conteúdo das aulas mais acessível: aqui, os estudantes encontram materiais organizados por disciplina e podem acompanhar o percurso de aprendizagem ao longo do ano.</p>
+        </div>
+      </div>
+      <div class="facts">
+        <div><strong>6</strong><span>áreas de ensino</span></div>
+        <div><strong>ADS</strong><span>formação em tecnologia</span></div>
+        <div><strong>UFPR</strong><span>mestrado em Informática</span></div>
+        <div><strong>PR</strong><span>educação pública</span></div>
+      </div>
+    </section>
+
+    <section class="section subjects" id="disciplinas">
+      <div class="section-heading">
+        <div><div class="section-label"><span>02</span> MATERIAIS DIDÁTICOS</div><h2>Escolha uma disciplina</h2></div>
+        <p>As páginas começam como uma base organizada e recebem novos arquivos conforme as aulas avançam.</p>
+      </div>
+      <div class="subject-grid" id="subjectGrid"></div>
+    </section>
+
+    <section class="section method" id="trajetoria">
+      <div class="method-copy">
+        <div class="section-label light"><span>03</span> COMO APRENDEMOS</div>
+        <h2>Teoria que ganha sentido quando vira prática.</h2>
+        <p>Os materiais são pensados para apoiar explicações curtas, registro escrito, resolução de problemas e construção progressiva de projetos.</p>
+      </div>
+      <div class="method-list">
+        <div><b>01</b><span><strong>Compreender</strong><small>Conceitos essenciais, explicados com linguagem direta.</small></span></div>
+        <div><b>02</b><span><strong>Praticar</strong><small>Atividades graduais, do primeiro exemplo ao desafio.</small></span></div>
+        <div><b>03</b><span><strong>Compartilhar</strong><small>Discussão entre pares e aprendizagem com os erros.</small></span></div>
+      </div>
+    </section>
+
+    <section class="section links" id="contato">
+      <div class="section-label"><span>04</span> PERFIS E CONTATO</div>
+      <h2>Vamos nos conectar</h2>
+      <p>Acompanhe minha trajetória acadêmica, projetos e conteúdos profissionais.</p>
+      <div class="social-grid" id="socialGrid"></div>
+    </section>
+  </main>
+
+  <footer><span>© <span id="year"></span> Eliane da Silva Coelho</span><span>Educação • Tecnologia • Pesquisa</span></footer>
+
+  <dialog id="subjectModal">
+    <button class="modal-close" aria-label="Fechar">×</button>
+    <div id="modalContent"></div>
+  </dialog>
+  <script src="content.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
