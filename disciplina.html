@@ -1,0 +1,276 @@
+<!doctype html>
+
+<html lang="pt-BR">
+
+<head>
+
+  <meta charset="utf-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1"
+  >
+
+  <meta
+    name="description"
+    content="Aulas, atividades e materiais das disciplinas da Prof.ª Eliane Coelho."
+  >
+
+  <title>
+    Disciplina | Prof.ª Eliane Coelho
+  </title>
+
+  <link
+    rel="preconnect"
+    href="https://fonts.googleapis.com"
+  >
+
+  <link
+    rel="preconnect"
+    href="https://fonts.gstatic.com"
+    crossorigin
+  >
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Fraunces:opsz,wght@9..144,600;9..144,700&display=swap"
+    rel="stylesheet"
+  >
+
+  <link rel="stylesheet" href="styles.css">
+
+</head>
+
+<body>
+
+  <a class="skip-link" href="#conteudo">
+    Ir para o conteúdo
+  </a>
+
+  <!-- CABEÇALHO -->
+
+  <header class="topbar">
+
+    <a
+      class="brand"
+      href="index.html"
+      aria-label="Voltar para a página inicial"
+    >
+
+      <span class="brand-mark">
+        EC
+      </span>
+
+      <span>
+
+        <strong>
+          Eliane Coelho
+        </strong>
+
+        <small>
+          Educação em Computação
+        </small>
+
+      </span>
+
+    </a>
+
+    <button
+      class="menu-button"
+      type="button"
+      aria-label="Abrir menu"
+      aria-expanded="false"
+    >
+      ☰
+    </button>
+
+    <nav
+      class="nav"
+      aria-label="Navegação principal"
+    >
+
+      <a href="index.html">
+        Início
+      </a>
+
+      <a href="index.html#sobre">
+        Sobre
+      </a>
+
+      <a href="index.html#disciplinas">
+        Disciplinas
+      </a>
+
+      <a href="index.html#pesquisa">
+        Pesquisa
+      </a>
+
+      <a href="index.html#contato">
+        Links
+      </a>
+
+    </nav>
+
+  </header>
+
+  <main id="conteudo">
+
+    <!-- APRESENTAÇÃO DA DISCIPLINA -->
+
+    <section class="discipline-header">
+
+      <a
+        class="back-link"
+        href="index.html#disciplinas"
+      >
+        ← Voltar para as disciplinas
+      </a>
+
+      <p class="eyebrow">
+        MATERIAIS DIDÁTICOS
+      </p>
+
+      <h1 id="disciplineTitle">
+        Carregando disciplina...
+      </h1>
+
+      <p id="disciplineDescription">
+        Aguarde enquanto os materiais são carregados.
+      </p>
+
+    </section>
+
+    <!-- MATERIAIS -->
+
+    <section class="materials-section">
+
+      <div class="materials-toolbar">
+
+        <div>
+
+          <div class="section-label">
+
+            <span>01</span>
+
+            CONTEÚDOS PUBLICADOS
+
+          </div>
+
+          <h2>
+            Materiais da disciplina
+          </h2>
+
+        </div>
+
+        <div class="filter-container">
+
+          <label for="materialFilter">
+            Filtrar por tipo
+          </label>
+
+          <select
+            class="material-filter"
+            id="materialFilter"
+          >
+
+            <option value="todos">
+              Todos os materiais
+            </option>
+
+            <option value="slides">
+              Slides
+            </option>
+
+            <option value="aula">
+              Aulas
+            </option>
+
+            <option value="atividade">
+              Atividades
+            </option>
+
+            <option value="avaliacao">
+              Avaliações
+            </option>
+
+            <option value="material-complementar">
+              Materiais complementares
+            </option>
+
+          </select>
+
+        </div>
+
+      </div>
+
+      <p class="discipline-indicator">
+
+        Você está acessando:
+
+        <strong id="disciplineName">
+          Disciplina
+        </strong>
+
+      </p>
+
+      <!--
+        Os materiais cadastrados no materiais.js
+        serão inseridos neste espaço.
+      -->
+
+      <div
+        class="materials-grid"
+        id="materialsGrid"
+        aria-live="polite"
+      >
+
+        <div class="empty-materials">
+
+          <strong>
+            Carregando materiais...
+          </strong>
+
+          <p>
+            Aguarde alguns instantes.
+          </p>
+
+        </div>
+
+      </div>
+
+    </section>
+
+  </main>
+
+  <!-- RODAPÉ -->
+
+  <footer>
+
+    <span>
+
+      © <span id="year"></span>
+
+      Eliane da Silva Coelho
+
+    </span>
+
+    <span>
+      Educação • Tecnologia • Pesquisa
+    </span>
+
+  </footer>
+
+  <!--
+    A ordem destes arquivos é importante:
+
+    1. content.js carrega as disciplinas;
+    2. materiais.js carrega as aulas e atividades;
+    3. app.js monta a página.
+  -->
+
+  <script src="content.js"></script>
+  <script src="materiais.js"></script>
+  <script src="app.js"></script>
+
+</body>
+
+</html>

@@ -9,9 +9,9 @@ window.SITE_CONTENT = {
     { title: "Lógica Computacional", short: "Lógica Computacional", icon: "∴", tone: "coral", description: "Raciocínio lógico, proposições, resolução de problemas, vetores e matrizes.", materials: ["Conteúdo para estudo", "Desafios de lógica", "Atividades avaliativas"] }
   ],
   socials: [
-    { name: "Currículo Lattes", detail: "Produção acadêmica", icon: "L", url: "https://buscatextual.cnpq.br/buscatextual/busca.do" },
-    { name: "GitHub", detail: "Projetos e códigos", icon: "GH", url: "https://github.com/" },
-    { name: "LinkedIn", detail: "Perfil profissional", icon: "in", url: "https://www.linkedin.com/" },
-    { name: "Instagram", detail: "Conteúdos e cotidiano", icon: "◎", url: "https://www.instagram.com/" }
+    { name: "Currículo Lattes", detail: "Produção acadêmica", icon: "L", url: "https://lattes.cnpq.br/1705068673701995" },
+    { name: "GitHub", detail: "Projetos e códigos", icon: "GH", url: "https://github.com/elianecoelho" },
+    { name: "LinkedIn", detail: "Perfil profissional", icon: "in", url: "https://www.linkedin.com/in/eliane-coelho" },
+    { name: "Instagram", detail: "Conteúdos e cotidiano", icon: "◎", url: "https://www.instagram.com/elianecoelhooo" }
   ]
 };
