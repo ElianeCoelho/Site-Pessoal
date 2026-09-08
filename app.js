@@ -2,9 +2,11 @@
    CONFIGURAÇÕES INICIAIS
    ========================================================= */
 
+
 const siteContent = window.SITE_CONTENT || {};
 const subjects = siteContent.subjects || [];
 const socials = siteContent.socials || [];
+const planosEstudo = window.PLANOS_ESTUDO || {};
 const materiais = window.MATERIAIS || [];
 
 
@@ -657,15 +659,309 @@ function carregarAnoAtual() {
   }
 }
 
+/* =========================================================
+   PLANO DE ESTUDOS
+   ========================================================= */
 
+function carregarPlanoDeEstudos() {
+  const planGrid =
+    document.querySelector("#studyPlanGrid");
+
+  const planIntro =
+    document.querySelector("#studyPlanIntro");
+
+  if (!planGrid) {
+    return;
+  }
+
+  const parametros =
+    new URLSearchParams(window.location.search);
+
+  const slugDisciplina =
+    parametros.get("disciplina");
+
+  const planos =
+    window.PLANOS_ESTUDO || {};
+
+  const plano =
+    planos[slugDisciplina];
+
+  if (!plano) {
+    if (planIntro) {
+      planIntro.innerHTML = "";
+    }
+
+    planGrid.innerHTML = `
+      <div class="empty-plan">
+
+        <strong>
+          Plano de estudos em elaboração
+        </strong>
+
+        <p>
+          O planejamento desta disciplina
+          será publicado em breve.
+        </p>
+
+      </div>
+    `;
+
+    return;
+  }
+
+  if (planIntro) {
+    planIntro.innerHTML = `
+      <div class="study-plan-summary">
+
+        <div class="study-plan-description">
+
+          <span class="plan-summary-label">
+            Sobre a disciplina
+          </span>
+
+          <p>
+            ${plano.apresentacao}
+          </p>
+
+        </div>
+
+        <div class="plan-workload">
+
+          <span>
+            Organização das aulas
+          </span>
+
+          <strong>
+            ${plano.cargaHoraria}
+          </strong>
+
+        </div>
+
+      </div>
+    `;
+  }
+
+  const trimestres =
+    plano.trimestres || [];
+
+  if (trimestres.length === 0) {
+    planGrid.innerHTML = `
+      <div class="empty-plan">
+
+        <strong>
+          Nenhum trimestre cadastrado
+        </strong>
+
+        <p>
+          O planejamento será publicado em breve.
+        </p>
+
+      </div>
+    `;
+
+    return;
+  }
+
+  planGrid.innerHTML =
+    trimestres
+      .map((trimestre) => {
+        return criarBlocoTrimestre(trimestre);
+      })
+      .join("");
+}
+
+
+/* =========================================================
+   CRIAR BLOCO DE CADA TRIMESTRE
+   ========================================================= */
+
+function criarBlocoTrimestre(trimestre) {
+  const semanas =
+    trimestre.semanas || [];
+
+  const linhasSemanas =
+    semanas
+      .map((item) => {
+        return `
+          <tr>
+
+            <td data-label="Semana">
+
+              <span class="week-number">
+                ${item.semana}
+              </span>
+
+            </td>
+
+            <td data-label="Conteúdo">
+
+              <strong>
+                ${item.conteudo}
+              </strong>
+
+            </td>
+
+            <td data-label="Objetivo">
+
+              ${item.objetivo}
+
+            </td>
+
+          </tr>
+        `;
+      })
+      .join("");
+
+  return `
+    <article class="trimester-card">
+
+      <div class="trimester-header">
+
+        <div>
+
+          <span class="trimester-number">
+            ${trimestre.numero}º trimestre
+          </span>
+
+          <h3>
+            ${trimestre.titulo}
+          </h3>
+
+        </div>
+
+        <button
+          class="trimester-toggle"
+          type="button"
+          aria-expanded="true"
+          aria-label="Mostrar ou ocultar o ${trimestre.numero}º trimestre"
+        >
+          −
+        </button>
+
+      </div>
+
+      <div class="trimester-content">
+
+        <div class="trimester-objective">
+
+          <strong>
+            Objetivo do trimestre
+          </strong>
+
+          <p>
+            ${trimestre.objetivo}
+          </p>
+
+        </div>
+
+        <div class="plan-table-container">
+
+          <table class="plan-table">
+
+            <thead>
+
+              <tr>
+
+                <th>
+                  Semana
+                </th>
+
+                <th>
+                  Conteúdo
+                </th>
+
+                <th>
+                  Objetivos de aprendizagem
+                </th>
+
+              </tr>
+
+            </thead>
+
+            <tbody>
+              ${linhasSemanas}
+            </tbody>
+
+          </table>
+
+        </div>
+
+        <div class="trimester-conclusion">
+
+          <strong>
+            Ao final do trimestre
+          </strong>
+
+          <p>
+            ${trimestre.conclusao}
+          </p>
+
+        </div>
+
+      </div>
+
+    </article>
+  `;
+}
+
+
+/* =========================================================
+   ABRIR E FECHAR OS TRIMESTRES
+   ========================================================= */
+
+function configurarTrimestres() {
+  const planGrid =
+    document.querySelector("#studyPlanGrid");
+
+  if (!planGrid) {
+    return;
+  }
+
+  planGrid.addEventListener("click", (evento) => {
+    const botao =
+      evento.target.closest(".trimester-toggle");
+
+    if (!botao) {
+      return;
+    }
+
+    const trimestre =
+      botao.closest(".trimester-card");
+
+    const conteudo =
+      trimestre.querySelector(
+        ".trimester-content"
+      );
+
+    const estaAberto =
+      botao.getAttribute("aria-expanded") ===
+      "true";
+
+    botao.setAttribute(
+      "aria-expanded",
+      String(!estaAberto)
+    );
+
+    conteudo.hidden = estaAberto;
+
+    botao.textContent =
+      estaAberto ? "+" : "−";
+  });
+}
 /* =========================================================
    INICIALIZAÇÃO DO SITE
    ========================================================= */
 
-document.addEventListener("DOMContentLoaded", () => {
+
+   document.addEventListener("DOMContentLoaded", () => {
   carregarDisciplinas();
   carregarRedesSociais();
+
   carregarPaginaDisciplina();
+
+  carregarPlanoDeEstudos();
+  configurarTrimestres();
+
   configurarFiltroMateriais();
   configurarMenu();
   carregarAnoAtual();

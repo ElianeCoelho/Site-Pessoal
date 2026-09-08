@@ -13,7 +13,7 @@
 
   <meta
     name="description"
-    content="Aulas, atividades e materiais das disciplinas da Prof.ª Eliane Coelho."
+    content="Planos de estudo, aulas, atividades e materiais das disciplinas da Prof.ª Eliane Coelho."
   >
 
   <title>
@@ -92,16 +92,16 @@
         Início
       </a>
 
-      <a href="index.html#sobre">
-        Sobre
-      </a>
-
       <a href="index.html#disciplinas">
         Disciplinas
       </a>
 
-      <a href="index.html#pesquisa">
-        Pesquisa
+      <a href="#plano-de-estudos">
+        Plano de estudos
+      </a>
+
+      <a href="#materiais">
+        Materiais
       </a>
 
       <a href="index.html#contato">
@@ -126,7 +126,7 @@
       </a>
 
       <p class="eyebrow">
-        MATERIAIS DIDÁTICOS
+        ÁREA DA DISCIPLINA
       </p>
 
       <h1 id="disciplineTitle">
@@ -134,14 +134,104 @@
       </h1>
 
       <p id="disciplineDescription">
-        Aguarde enquanto os materiais são carregados.
+        Aguarde enquanto as informações são carregadas.
       </p>
+
+      <div class="discipline-actions">
+
+        <a
+          class="button discipline-button-primary"
+          href="#plano-de-estudos"
+        >
+          Ver plano de estudos
+        </a>
+
+        <a
+          class="button discipline-button-secondary"
+          href="#materiais"
+        >
+          Ver materiais
+        </a>
+
+      </div>
+
+    </section>
+
+    <!-- PLANO DE ESTUDOS -->
+
+    <section
+      class="section study-plan-section"
+      id="plano-de-estudos"
+    >
+
+      <div class="section-heading">
+
+        <div>
+
+          <div class="section-label">
+
+            <span>01</span>
+
+            PLANO DE ESTUDOS
+
+          </div>
+
+          <h2>
+            Organização da disciplina
+          </h2>
+
+        </div>
+
+        <p>
+          Conteúdos e objetivos de aprendizagem
+          organizados por trimestre.
+        </p>
+
+      </div>
+
+      <!--
+        A apresentação e a carga horária serão
+        carregadas automaticamente pelo planos.js.
+      -->
+
+      <div
+        class="study-plan-intro"
+        id="studyPlanIntro"
+      ></div>
+
+      <!--
+        Os trimestres cadastrados no planos.js
+        serão inseridos neste espaço.
+      -->
+
+      <div
+        class="study-plan-grid"
+        id="studyPlanGrid"
+        aria-live="polite"
+      >
+
+        <div class="empty-plan">
+
+          <strong>
+            Carregando plano de estudos...
+          </strong>
+
+          <p>
+            Aguarde alguns instantes.
+          </p>
+
+        </div>
+
+      </div>
 
     </section>
 
     <!-- MATERIAIS -->
 
-    <section class="materials-section">
+    <section
+      class="materials-section"
+      id="materiais"
+    >
 
       <div class="materials-toolbar">
 
@@ -149,7 +239,7 @@
 
           <div class="section-label">
 
-            <span>01</span>
+            <span>02</span>
 
             CONTEÚDOS PUBLICADOS
 
@@ -260,14 +350,16 @@
   </footer>
 
   <!--
-    A ordem destes arquivos é importante:
+    A ordem dos arquivos é importante:
 
     1. content.js carrega as disciplinas;
-    2. materiais.js carrega as aulas e atividades;
-    3. app.js monta a página.
+    2. planos.js carrega os planos de estudo;
+    3. materiais.js carrega as aulas e atividades;
+    4. app.js monta e controla a página.
   -->
 
   <script src="content.js"></script>
+  <script src="planos.js"></script>
   <script src="materiais.js"></script>
   <script src="app.js"></script>
 
