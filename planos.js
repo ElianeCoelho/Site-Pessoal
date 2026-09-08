@@ -255,6 +255,258 @@ window.PLANOS_ESTUDO = {
 
     ]
 
-  }
+  },
+  "introducao-programacao": {
+
+  disciplina:
+    "Introdução à Programação",
+
+  apresentacao:
+    "A disciplina desenvolve os fundamentos da lógica e da programação, trabalhando a construção de algoritmos e a resolução de problemas por meio de códigos. Nos dois primeiros trimestres, os estudantes utilizam JavaScript no ambiente p5.js para desenvolver programas envolvendo saída de dados, variáveis, arrays, estruturas de repetição e matrizes.",
+
+  cargaHoraria:
+    "2 aulas semanais",
+
+  trimestres: [
+
+    /* ===================================================
+       1º TRIMESTRE
+       =================================================== */
+
+    {
+      numero: 1,
+
+      titulo:
+        "Fundamentos de Lógica e Introdução à Programação",
+
+      objetivo:
+        "Compreender os fundamentos da lógica de programação, desenvolver o raciocínio necessário para a construção de algoritmos e criar os primeiros programas em JavaScript utilizando o ambiente p5.js.",
+
+      semanas: [
+
+        {
+          semana: 1,
+          conteudo:
+            "Introdução à programação e resolução de problemas",
+          objetivo:
+            "Compreender o que é programação e reconhecer como problemas podem ser resolvidos por meio de instruções organizadas."
+        },
+
+        {
+          semana: 2,
+          conteudo:
+            "Problemas, algoritmos e programas",
+          objetivo:
+            "Diferenciar problema, algoritmo e programa e compreender a relação existente entre esses conceitos."
+        },
+
+        {
+          semana: 3,
+          conteudo:
+            "Construção de algoritmos",
+          objetivo:
+            "Organizar instruções em uma sequência lógica e elaborar algoritmos simples para situações do cotidiano."
+        },
+
+        {
+          semana: 4,
+          conteudo:
+            "Lógica e sequência de instruções",
+          objetivo:
+            "Desenvolver o raciocínio lógico e compreender a importância da ordem de execução das instruções."
+        },
+
+        {
+          semana: 5,
+          conteudo:
+            "Proposições e raciocínio lógico",
+          objetivo:
+            "Reconhecer proposições e analisar afirmações a partir de seu valor lógico."
+        },
+
+        {
+          semana: 6,
+          conteudo:
+            "Premissas, conclusões e argumentos",
+          objetivo:
+            "Identificar premissas e conclusões e compreender como elas se relacionam na construção de argumentos."
+        },
+
+        {
+          semana: 7,
+          conteudo:
+            "Introdução ao JavaScript",
+          objetivo:
+            "Conhecer as características básicas do JavaScript e compreender sua utilização para desenvolver programas."
+        },
+
+        {
+          semana: 8,
+          conteudo:
+            "Ambiente p5.js e estrutura inicial do programa",
+          objetivo:
+            "Conhecer o ambiente de programação p5.js, executar códigos e reconhecer a estrutura básica de um programa."
+        },
+
+        {
+          semana: 9,
+          conteudo:
+            "Saída de dados",
+          objetivo:
+            "Utilizar comandos para apresentar textos, valores e resultados durante a execução de programas."
+        },
+
+        {
+          semana: 10,
+          conteudo:
+            "Variáveis e armazenamento de dados",
+          objetivo:
+            "Compreender o conceito de variável e utilizá-la para armazenar diferentes informações."
+        },
+
+        {
+          semana: 11,
+          conteudo:
+            "Concatenação e construção de mensagens",
+          objetivo:
+            "Combinar textos e valores armazenados em variáveis para produzir mensagens e saídas personalizadas."
+        },
+
+        {
+          semana: 12,
+          conteudo:
+            "Prática, revisão e avaliação",
+          objetivo:
+            "Aplicar os conceitos de lógica, algoritmos, variáveis, saída de dados e concatenação em atividades práticas e revisar a aprendizagem do trimestre."
+        }
+
+      ],
+
+      conclusao:
+        "Ao concluir o primeiro trimestre, espera-se que o estudante compreenda a relação entre problema, algoritmo e programa, desenvolva o raciocínio lógico e seja capaz de construir programas simples em JavaScript utilizando o ambiente p5.js, variáveis, saída de dados e concatenação."
+
+    },
+
+    /* ===================================================
+       2º TRIMESTRE
+       =================================================== */
+
+    {
+      numero: 2,
+
+      titulo:
+        "Arrays, Estruturas de Repetição e Matrizes",
+
+      objetivo:
+        "Ampliar os conhecimentos de programação por meio da utilização de estruturas para armazenamento e percurso de conjuntos de dados, aplicando arrays, estruturas de repetição e matrizes em programas JavaScript.",
+
+      semanas: [
+
+        {
+          semana: 1,
+          conteudo:
+            "Retomada de variáveis e saída de dados",
+          objetivo:
+            "Revisar os principais conceitos do trimestre anterior e utilizá-los novamente em pequenos programas."
+        },
+
+        {
+          semana: 2,
+          conteudo:
+            "Introdução aos arrays",
+          objetivo:
+            "Compreender arrays como estruturas utilizadas para armazenar vários valores em uma única variável."
+        },
+
+        {
+          semana: 3,
+          conteudo:
+            "Índices e acesso aos elementos de arrays",
+          objetivo:
+            "Compreender a organização dos elementos de um array e utilizar índices para acessar valores específicos."
+        },
+
+        {
+          semana: 4,
+          conteudo:
+            "Propriedade length e métodos de arrays",
+          objetivo:
+            "Utilizar length para identificar a quantidade de elementos e aplicar push() e pop() para modificar arrays."
+        },
+
+        {
+          semana: 5,
+          conteudo:
+            "Prática com arrays no p5.js",
+          objetivo:
+            "Criar arrays, acessar seus elementos e apresentar os valores armazenados em programas desenvolvidos no p5.js."
+        },
+
+        {
+          semana: 6,
+          conteudo:
+            "Estrutura de repetição for",
+          objetivo:
+            "Compreender inicialização, condição e incremento e utilizar for para executar comandos repetidamente."
+        },
+
+        {
+          semana: 7,
+          conteudo:
+            "Arrays e estrutura for",
+          objetivo:
+            "Combinar arrays e estruturas de repetição para percorrer e apresentar conjuntos de valores."
+        },
+
+        {
+          semana: 8,
+          conteudo:
+            "Estruturas for...in e for...of",
+          objetivo:
+            "Compreender a diferença entre percorrer índices e valores e utilizar for...in e for...of com arrays."
+        },
+
+        {
+          semana: 9,
+          conteudo:
+            "Comparação entre for, for...in e for...of",
+          objetivo:
+            "Comparar as estruturas de repetição estudadas e reconhecer a forma adequada de utilizá-las em diferentes situações."
+        },
+
+        {
+          semana: 10,
+          conteudo:
+            "Introdução às matrizes",
+          objetivo:
+            "Compreender matrizes como arrays de arrays organizados em linhas e colunas e acessar seus elementos utilizando dois índices."
+        },
+
+        {
+          semana: 11,
+          conteudo:
+            "Matrizes e for aninhado",
+          objetivo:
+            "Utilizar estruturas for aninhadas para percorrer linhas e colunas e apresentar todos os elementos de uma matriz."
+        },
+
+        {
+          semana: 12,
+          conteudo:
+            "Prática, revisão e avaliação",
+          objetivo:
+            "Integrar arrays, estruturas de repetição e matrizes em atividades práticas e revisar os conteúdos desenvolvidos durante o trimestre."
+        }
+
+      ],
+
+      conclusao:
+        "Ao concluir o segundo trimestre, espera-se que o estudante seja capaz de criar e manipular arrays, acessar elementos por índices, utilizar length, push() e pop(), aplicar for, for...in e for...of e compreender a organização e o percurso de matrizes utilizando estruturas de repetição aninhadas."
+
+    }
+
+  ]
+
+}
 
 };

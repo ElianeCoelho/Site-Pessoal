@@ -14,6 +14,7 @@ window.SITE_CONTENT = {
   description: "Hardware, software, sistemas, redes e os conceitos que formam a base da computação."
 },    
     { title: "Introdução à Programação",
+      slug: "introducao-programacao",
       short: "Introdução à Programação", 
       icon: "▶", 
       tone: "plum", 
