@@ -13,7 +13,12 @@ window.SITE_CONTENT = {
   tone: "blue",
   description: "Hardware, software, sistemas, redes e os conceitos que formam a base da computação."
 },    
-    { title: "Introdução à Programação", short: "Introdução à Programação", icon: "▶", tone: "plum", description: "Primeiros algoritmos, variáveis, decisões, repetições e estruturas de dados.", materials: ["Lógica e algoritmos", "Exemplos de código", "Exercícios práticos"] },
+    { title: "Introdução à Programação",
+      short: "Introdução à Programação", 
+      icon: "▶", 
+      tone: "plum", 
+      description: "Primeiros algoritmos, variáveis, decisões, repetições e estruturas de dados.", materials: ["Lógica e algoritmos", "Exemplos de código", "Exercícios práticos"] 
+    },
     { title: "Lógica Computacional", short: "Lógica Computacional", icon: "∴", tone: "coral", description: "Raciocínio lógico, proposições, resolução de problemas, vetores e matrizes.", materials: ["Conteúdo para estudo", "Desafios de lógica", "Atividades avaliativas"] }
   ],
   socials: [
